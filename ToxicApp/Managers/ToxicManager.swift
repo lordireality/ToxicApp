@@ -20,9 +20,16 @@ class ToxicManager: ObservableObject{
             seconds = 0
         }
     }
+    func sendCurrentInfoToWatches(){
+        if(sm.session.isReachable){
+            sm.SendMessage(messages: ["ToxicInfoState": ToxicModel(isToxic: getSavedToxicState(), toxicSince: getToxicSinceStr())])
+        }
+    }
+    
     func clearTimeSince(){
         UserDefaults.standard.setValue("", forKey: UserDefaults.Keys.toxicSince.rawValue)
         self.seconds = 0
+        self.sendCurrentInfoToWatches()
     }
     func setTimeSinceNow(){
         let datetimenow = Date()
@@ -30,6 +37,7 @@ class ToxicManager: ObservableObject{
         formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         let formatteddate = formatter.string(from: datetimenow)
         UserDefaults.standard.setValue(formatteddate, forKey: UserDefaults.Keys.toxicSince.rawValue)
+        self.sendCurrentInfoToWatches()
     }
     
     func getSecondsSince() ->Int64{
@@ -53,6 +61,10 @@ class ToxicManager: ObservableObject{
     }
     func setToxicState(state: Bool){
         UserDefaults.standard.setValue(state, forKey: UserDefaults.Keys.isToxic.rawValue)
+        self.sendCurrentInfoToWatches()
+    }
+    func getToxicSinceStr() -> String{
+        return UserDefaults.standard.string(forKey: UserDefaults.Keys.toxicSince.rawValue) ?? ""
     }
     func FormatTime(seconds:Int64)->String{
         let (d, h, m, s) = (seconds / 86400 ,(seconds % 86400) / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)

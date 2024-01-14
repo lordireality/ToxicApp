@@ -23,6 +23,7 @@
 		672ACBD32B53646E006B9CD8 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */; };
 		672ACBD52B53667C006B9CD8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD42B53667C006B9CD8 /* MainView.swift */; };
 		672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD62B536767006B9CD8 /* SessionManager.swift */; };
+		672ACBD92B5379A5006B9CD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBD82B5379A5006B9CD8 /* Localizable.xcstrings */; };
 		6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC852B532DA800EC7F5D /* ToxicApp.swift */; };
 		6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC872B532DA800EC7F5D /* ContentView.swift */; };
 		6774AC8A2B532DAD00EC7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6774AC892B532DAD00EC7F5D /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		672ACBD42B53667C006B9CD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		672ACBD62B536767006B9CD8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		672ACBD82B5379A5006B9CD8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6774AC822B532DA800EC7F5D /* ToxicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToxicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774AC852B532DA800EC7F5D /* ToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicApp.swift; sourceTree = "<group>"; };
 		6774AC872B532DA800EC7F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				672ACBD02B535FA2006B9CD8 /* SessionManager.swift */,
 				672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */,
 				672ACBD42B53667C006B9CD8 /* MainView.swift */,
+				672ACBD82B5379A5006B9CD8 /* Localizable.xcstrings */,
 			);
 			path = "ToxicAppWatchOS Watch App";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				672ACBC62B535DA2006B9CD8 /* Preview Assets.xcassets in Resources */,
 				672ACBC32B535DA2006B9CD8 /* Assets.xcassets in Resources */,
+				672ACBD92B5379A5006B9CD8 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
