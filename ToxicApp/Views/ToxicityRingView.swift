@@ -15,6 +15,7 @@ struct ToxicityRingView: View {
    
     init(toxicManager: ToxicManager){
         _toxicManager = StateObject(wrappedValue: toxicManager)
+        _selectedSeconds = State(wrappedValue: toxicManager.toxicSecondsTarget)
     }
     var body: some View {
         VStack{
@@ -34,8 +35,12 @@ struct ToxicityRingView: View {
                 .foregroundColor(Color.green)
                 .cornerRadius(15)
                 .buttonStyle(.bordered)
+                //TODO: Исправить блядь корежит из за редрава UI
                 .sheet(isPresented: $isTimePickerPresented, onDismiss: timePickerOnDismiss) {
-                    TimePickerView(totalSelectedSeconds: $selectedSeconds)
+            
+                    let (d, h, m, s) = (Int(selectedSeconds / 86400) ,Int((selectedSeconds % 86400) / 3600), Int((selectedSeconds % 3600) / 60), Int((selectedSeconds % 3600) % 60))
+        
+                    TimePickerView(hours: h,minutes: m,seconds: s,totalSelectedSeconds: $selectedSeconds)
                 }
 
             }

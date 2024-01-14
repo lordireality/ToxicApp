@@ -9,14 +9,16 @@ import Foundation
 import SwiftUI
 
 struct TimePickerView: View {
-    @State private var hours = 0
-    @State private var minutes = 0
-    @State private var seconds = 0
+    @State var hours = 0
+    @State var minutes = 0
+    @State var seconds = 0
     @Binding var totalSelectedSeconds:Int64
     let hoursRange = 0..<24
     let minutesRange = 0..<60
     let secondsRange = 0..<60
     @Environment(\.dismiss) var dismiss
+    
+    
     var body: some View {
         VStack {
             HStack {

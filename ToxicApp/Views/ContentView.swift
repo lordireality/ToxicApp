@@ -16,7 +16,7 @@ struct ContentView: View {
             TabView(selection: $activeTab){
                 MainView(toxicManager: toxicManager)
                      .tabItem {
-                         Label("#MainView", systemImage: "trash.fill")
+                         Label("#Toxicity", systemImage: "trash.fill")
                      }
                      .tag("ToxicityView")
                      
