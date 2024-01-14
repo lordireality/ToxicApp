@@ -1,28 +1,18 @@
 //
 //  ToxicManager.swift
-//  ToxicApp
+//  ToxicAppWatchOS Watch App
 //
 //  Created by Герман Зыкин on 14.01.2024.
 //
 
 import Foundation
 
-class ToxicManager: ObservableObject{
-    
-    private var sm:SessionManager = SessionManager()
-    @Published var isToxic = false
-    @Published var seconds: Int64 = 0
+class ToxicManager{
     init (){
-        isToxic = self.getSavedToxicState()
-        if isToxic {
-            seconds = getSecondsSince()
-        } else {
-            seconds = 0
-        }
+        
     }
     func clearTimeSince(){
         UserDefaults.standard.setValue("", forKey: UserDefaults.Keys.toxicSince.rawValue)
-        self.seconds = 0
     }
     func setTimeSinceNow(){
         let datetimenow = Date()
@@ -65,5 +55,4 @@ class ToxicManager: ObservableObject{
         return formatedTime
         
     }
-    
 }

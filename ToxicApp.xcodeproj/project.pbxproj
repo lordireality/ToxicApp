@@ -13,6 +13,16 @@
 		672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBAF2B534618006B9CD8 /* ToxicAppModel.xcdatamodeld */; };
 		672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */; };
 		672ACBB52B534847006B9CD8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBB42B534847006B9CD8 /* DBManager.swift */; };
+		672ACBBF2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */; };
+		672ACBC12B535D9E006B9CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBC02B535D9E006B9CD8 /* ContentView.swift */; };
+		672ACBC32B535DA2006B9CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBC22B535DA2006B9CD8 /* Assets.xcassets */; };
+		672ACBC62B535DA2006B9CD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBC52B535DA2006B9CD8 /* Preview Assets.xcassets */; };
+		672ACBC92B535DA2006B9CD8 /* ToxicAppWatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		672ACBCF2B535F26006B9CD8 /* ToxicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBCE2B535F26006B9CD8 /* ToxicManager.swift */; };
+		672ACBD12B535FA2006B9CD8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD02B535FA2006B9CD8 /* SessionManager.swift */; };
+		672ACBD32B53646E006B9CD8 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */; };
+		672ACBD52B53667C006B9CD8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD42B53667C006B9CD8 /* MainView.swift */; };
+		672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD62B536767006B9CD8 /* SessionManager.swift */; };
 		6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC852B532DA800EC7F5D /* ToxicApp.swift */; };
 		6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC872B532DA800EC7F5D /* ContentView.swift */; };
 		6774AC8A2B532DAD00EC7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6774AC892B532DAD00EC7F5D /* Assets.xcassets */; };
@@ -20,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		672ACBC72B535DA2006B9CD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6774AC7A2B532DA800EC7F5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 672ACBBB2B535D9D006B9CD8;
+			remoteInfo = "ToxicAppWatchOS Watch App";
+		};
 		6774AC932B532DAE00EC7F5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6774AC7A2B532DA800EC7F5D /* Project object */;
@@ -36,6 +53,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		672ACBCD2B535DA2006B9CD8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				672ACBC92B535DA2006B9CD8 /* ToxicAppWatchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		672ACBA92B532EC7006B9CD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicManager.swift; sourceTree = "<group>"; };
@@ -43,6 +74,16 @@
 		672ACBB02B534618006B9CD8 /* ToxicAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToxicAppModel.xcdatamodel; sourceTree = "<group>"; };
 		672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		672ACBB42B534847006B9CD8 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToxicAppWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicAppWatchOSApp.swift; sourceTree = "<group>"; };
+		672ACBC02B535D9E006B9CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		672ACBC22B535DA2006B9CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		672ACBC52B535DA2006B9CD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		672ACBCE2B535F26006B9CD8 /* ToxicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicManager.swift; sourceTree = "<group>"; };
+		672ACBD02B535FA2006B9CD8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		672ACBD42B53667C006B9CD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		672ACBD62B536767006B9CD8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		6774AC822B532DA800EC7F5D /* ToxicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToxicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774AC852B532DA800EC7F5D /* ToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicApp.swift; sourceTree = "<group>"; };
 		6774AC872B532DA800EC7F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		672ACBB92B535D9D006B9CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6774AC7F2B532DA800EC7F5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +130,7 @@
 			children = (
 				672ACBB42B534847006B9CD8 /* DBManager.swift */,
 				672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */,
+				672ACBD62B536767006B9CD8 /* SessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -94,10 +143,34 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		672ACBBD2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				672ACBCE2B535F26006B9CD8 /* ToxicManager.swift */,
+				672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */,
+				672ACBC02B535D9E006B9CD8 /* ContentView.swift */,
+				672ACBC22B535DA2006B9CD8 /* Assets.xcassets */,
+				672ACBC42B535DA2006B9CD8 /* Preview Content */,
+				672ACBD02B535FA2006B9CD8 /* SessionManager.swift */,
+				672ACBD22B53646E006B9CD8 /* UserDefaultsExtension.swift */,
+				672ACBD42B53667C006B9CD8 /* MainView.swift */,
+			);
+			path = "ToxicAppWatchOS Watch App";
+			sourceTree = "<group>";
+		};
+		672ACBC42B535DA2006B9CD8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				672ACBC52B535DA2006B9CD8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		6774AC792B532DA800EC7F5D = {
 			isa = PBXGroup;
 			children = (
 				6774AC842B532DA800EC7F5D /* ToxicApp */,
+				672ACBBD2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App */,
 				6774AC832B532DA800EC7F5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +181,7 @@
 				6774AC822B532DA800EC7F5D /* ToxicApp.app */,
 				6774AC922B532DAE00EC7F5D /* ToxicAppTests.xctest */,
 				6774AC9C2B532DAE00EC7F5D /* ToxicAppUITests.xctest */,
+				672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +189,8 @@
 		6774AC842B532DA800EC7F5D /* ToxicApp */ = {
 			isa = PBXGroup;
 			children = (
-				672ACBB72B5348B0006B9CD8 /* Extensions */,
 				672ACBB62B534892006B9CD8 /* Managers */,
+				672ACBB72B5348B0006B9CD8 /* Extensions */,
 				6774AC852B532DA800EC7F5D /* ToxicApp.swift */,
 				672ACBA92B532EC7006B9CD8 /* MainView.swift */,
 				6774AC872B532DA800EC7F5D /* ContentView.swift */,
@@ -139,6 +213,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		672ACBBB2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 672ACBCA2B535DA2006B9CD8 /* Build configuration list for PBXNativeTarget "ToxicAppWatchOS Watch App" */;
+			buildPhases = (
+				672ACBB82B535D9D006B9CD8 /* Sources */,
+				672ACBB92B535D9D006B9CD8 /* Frameworks */,
+				672ACBBA2B535D9D006B9CD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToxicAppWatchOS Watch App";
+			productName = "ToxicAppWatchOS Watch App";
+			productReference = 672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6774AC812B532DA800EC7F5D /* ToxicApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6774ACA62B532DAE00EC7F5D /* Build configuration list for PBXNativeTarget "ToxicApp" */;
@@ -146,10 +237,12 @@
 				6774AC7E2B532DA800EC7F5D /* Sources */,
 				6774AC7F2B532DA800EC7F5D /* Frameworks */,
 				6774AC802B532DA800EC7F5D /* Resources */,
+				672ACBCD2B535DA2006B9CD8 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				672ACBC82B535DA2006B9CD8 /* PBXTargetDependency */,
 			);
 			name = ToxicApp;
 			productName = ToxicApp;
@@ -202,6 +295,9 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					672ACBBB2B535D9D006B9CD8 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					6774AC812B532DA800EC7F5D = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -232,11 +328,21 @@
 				6774AC812B532DA800EC7F5D /* ToxicApp */,
 				6774AC912B532DAE00EC7F5D /* ToxicAppTests */,
 				6774AC9B2B532DAE00EC7F5D /* ToxicAppUITests */,
+				672ACBBB2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		672ACBBA2B535D9D006B9CD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672ACBC62B535DA2006B9CD8 /* Preview Assets.xcassets in Resources */,
+				672ACBC32B535DA2006B9CD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6774AC802B532DA800EC7F5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +370,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		672ACBB82B535D9D006B9CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672ACBD32B53646E006B9CD8 /* UserDefaultsExtension.swift in Sources */,
+				672ACBD52B53667C006B9CD8 /* MainView.swift in Sources */,
+				672ACBC12B535D9E006B9CD8 /* ContentView.swift in Sources */,
+				672ACBBF2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift in Sources */,
+				672ACBD12B535FA2006B9CD8 /* SessionManager.swift in Sources */,
+				672ACBCF2B535F26006B9CD8 /* ToxicManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6774AC7E2B532DA800EC7F5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +393,7 @@
 				6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */,
 				672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */,
 				672ACBAC2B533E5F006B9CD8 /* ToxicManager.swift in Sources */,
+				672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */,
 				672ACBB52B534847006B9CD8 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +415,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		672ACBC82B535DA2006B9CD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 672ACBBB2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App */;
+			targetProxy = 672ACBC72B535DA2006B9CD8 /* PBXContainerItemProxy */;
+		};
 		6774AC942B532DAE00EC7F5D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6774AC812B532DA800EC7F5D /* ToxicApp */;
@@ -308,6 +433,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		672ACBCB2B535DA2006B9CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToxicAppWatchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DQBS9FK8M3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ToxicAppWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = gzykin.ToxicApp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gzykin.ToxicApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		672ACBCC2B535DA2006B9CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToxicAppWatchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DQBS9FK8M3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ToxicAppWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = gzykin.ToxicApp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gzykin.ToxicApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		6774ACA42B532DAE00EC7F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,6 +553,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Debug;
 		};
@@ -424,12 +610,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
 		6774ACA72B532DAE00EC7F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +647,7 @@
 		6774ACA82B532DAE00EC7F5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +753,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		672ACBCA2B535DA2006B9CD8 /* Build configuration list for PBXNativeTarget "ToxicAppWatchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				672ACBCB2B535DA2006B9CD8 /* Debug */,
+				672ACBCC2B535DA2006B9CD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6774AC7D2B532DA800EC7F5D /* Build configuration list for PBXProject "ToxicApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

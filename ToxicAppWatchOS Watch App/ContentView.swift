@@ -1,19 +1,29 @@
 //
-//  MainView.swift
-//  ToxicApp
+//  ContentView.swift
+//  ToxicAppWatchOS Watch App
 //
-//  Created by Герман Зыкин on 13.01.2024.
+//  Created by Герман Зыкин on 14.01.2024.
 //
 
 import SwiftUI
 
-    
-struct MainView: View {
+struct ContentView: View {
     @State var labelHeight = CGFloat.zero
     
-    @StateObject var toxicManager:ToxicManager
+    var toxicManager:ToxicManager
+    @State var isToxic = false
+    @State var seconds: Int64 = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    init(toxicManager: ToxicManager){
+        self.toxicManager = toxicManager
+        _isToxic =  State(initialValue: self.toxicManager.getSavedToxicState())
+        if(self.isToxic){
+            _seconds =  State(initialValue: self.toxicManager.getSecondsSince())
+        } else {
+            self.seconds = 0
+        }
+    }
     
     var body: some View {
         VStack{
@@ -22,7 +32,7 @@ struct MainView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxHeight: labelHeight)
-                Toggle("#Toxicity", isOn: $toxicManager.isToxic).toggleStyle(SwitchToggleStyle(tint: .green))
+                Toggle("#Toxicity", isOn: $isToxic).toggleStyle(SwitchToggleStyle(tint: .green))
                     .overlay(
                         GeometryReader(content: { geometry in
                             Color.clear
@@ -31,12 +41,13 @@ struct MainView: View {
                                 })
                         })
                     )
-                    .onChange(of: toxicManager.isToxic){
-                        toxicManager.setToxicState(state: toxicManager.isToxic)
-                        if toxicManager.isToxic{
+                    .onChange(of: isToxic){
+                        toxicManager.setToxicState(state: isToxic)
+                        if isToxic{
                             toxicManager.setTimeSinceNow()
                         } else {
                             toxicManager.clearTimeSince()
+                            seconds = 0
                         }
                     }
             }.padding()
@@ -44,12 +55,12 @@ struct MainView: View {
             
         }
 
-        if(toxicManager.isToxic){
+        if(isToxic){
             Text("#YouBeenToxic")
             
-            Text(toxicManager.FormatTime(seconds: toxicManager.seconds))
+            Text(toxicManager.FormatTime(seconds: seconds))
             .onReceive(timer) { _ in
-                toxicManager.seconds += 1
+                seconds += 1
             }
         }
         
@@ -57,4 +68,6 @@ struct MainView: View {
     }
 }
 
-
+//#Preview {
+//    ContentView()
+//}
