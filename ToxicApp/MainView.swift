@@ -9,12 +9,22 @@ import SwiftUI
 
     
 struct MainView: View {
-    //@StateObject
     @State var labelHeight = CGFloat.zero
-    @State private var isToxic = false
+    
+    var toxicManager:ToxicManager
+    @State var isToxic = false
     @State var seconds: Int64 = 0
-    var toxicManager = ToxicManager()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    init(toxicManager: ToxicManager){
+        self.toxicManager = toxicManager
+        _isToxic =  State(initialValue: self.toxicManager.getSavedToxicState())
+        if(self.isToxic){
+            _seconds =  State(initialValue: self.toxicManager.getSecondsSince())
+        } else {
+            self.seconds = 0
+        }
+    }
     
     var body: some View {
         VStack{
@@ -25,14 +35,22 @@ struct MainView: View {
                     .frame(maxHeight: labelHeight)
                 Toggle("#Toxicity", isOn: $isToxic).toggleStyle(SwitchToggleStyle(tint: .green))
                     .overlay(
-                    GeometryReader(content: { geometry in
-                        Color.clear
-                            .onAppear(perform: {
-                                self.labelHeight = geometry.frame(in: .local).size.height
-                            })
-                    })
-                )
-                
+                        GeometryReader(content: { geometry in
+                            Color.clear
+                                .onAppear(perform: {
+                                    self.labelHeight = geometry.frame(in: .local).size.height
+                                })
+                        })
+                    )
+                    .onChange(of: isToxic){
+                        toxicManager.setToxicState(state: isToxic)
+                        if isToxic{
+                            toxicManager.setTimeSinceNow()
+                        } else {
+                            toxicManager.clearTimeSince()
+                            seconds = 0
+                        }
+                    }
             }.padding()
             
             
@@ -50,7 +68,5 @@ struct MainView: View {
         
     }
 }
-#Preview {
-    MainView()
-}
+
 
