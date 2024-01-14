@@ -49,6 +49,22 @@
         }
       }
     },
+    "#Achievments" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achievments"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Достижения"
+          }
+        }
+      }
+    },
     "#AppName" : {
       "localizations" : {
         "en" : {
@@ -61,6 +77,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Токсичность"
+          }
+        }
+      }
+    },
+    "#Change" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить"
           }
         }
       }
@@ -81,6 +113,50 @@
         }
       }
     },
+    "#Hours" : {
+
+    },
+    "#MainView" : {
+
+    },
+    "#Minutes" : {
+
+    },
+    "#Seconds" : {
+
+    },
+    "#Soon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soon"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро"
+          }
+        }
+      }
+    },
+    "#Submit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердить"
+          }
+        }
+      }
+    },
     "#Toxicity" : {
       "localizations" : {
         "en" : {
@@ -93,6 +169,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Токсичность"
+          }
+        }
+      }
+    },
+    "#ToxicityRing" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toxicity ring"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кольцо токсичности"
+          }
+        }
+      }
+    },
+    "#ToxicityTarget" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toxicity target"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цель токсичности "
           }
         }
       }
@@ -125,6 +233,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ты токсичничаешь на протяжении:"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
           }
         }
       }
@@ -192,6 +310,9 @@
           }
         }
       }
+    },
+    "%lld%%" : {
+
     }
   },
   "version" : "1.0"

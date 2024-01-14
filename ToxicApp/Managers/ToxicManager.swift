@@ -13,13 +13,14 @@ class ToxicManager: ObservableObject{
     @Published var isToxic = false
     @Published var seconds: Int64 = 0
     @Published var totalSeconds: Int64 = 0
-    
+    @Published var toxicSecondsTarget: Int64 = 300
     init (){
-        isToxic = self.getSavedToxicState()
-        if isToxic {
-            seconds = getSecondsSince()
+        self.toxicSecondsTarget = getCurToxicTarget()
+        self.isToxic = self.getSavedToxicState()
+        if self.isToxic {
+            self.seconds = self.getSecondsSince()
         } else {
-            seconds = 0
+            self.seconds = 0
         }
     }
     func sendCurrentInfoToWatches(){
@@ -65,6 +66,19 @@ class ToxicManager: ObservableObject{
         UserDefaults.standard.setValue(state, forKey: UserDefaults.Keys.isToxic.rawValue)
         self.sendCurrentInfoToWatches()
     }
+    func getCurToxicTarget() ->Int64{
+        if let tarVal = UserDefaults.standard.object(forKey: UserDefaults.Keys.CurToxicTarget.rawValue) as? Int64 {
+            return tarVal
+        } else {
+            return 300
+        }
+    }
+    func setCurToxicTarget(target: Int64){
+        UserDefaults.standard.setValue(target, forKey: UserDefaults.Keys.CurToxicTarget.rawValue)
+        self.toxicSecondsTarget = target
+    }
+    
+    
     func getToxicSinceStr() -> String{
         return UserDefaults.standard.string(forKey: UserDefaults.Keys.toxicSince.rawValue) ?? ""
     }

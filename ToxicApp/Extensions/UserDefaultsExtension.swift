@@ -13,6 +13,7 @@ extension UserDefaults {
         case isFirstAppLaunch
         case isToxic
         case toxicSince
+        case CurToxicTarget
     }
     func reset() {
         Keys.allCases.forEach { removeObject(forKey: $0.rawValue) }
