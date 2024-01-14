@@ -31,6 +31,7 @@ struct AboutPresentationView: View {
             VStack{
                 Divider()
                 Button("#Close") {
+                    impactFeedback.impactOccurred()
                     dismiss()
                 }.font(.title)
                 .cornerRadius(15)

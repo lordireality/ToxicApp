@@ -32,6 +32,7 @@ struct MainView: View {
                         })
                     )
                     .onChange(of: toxicManager.isToxic){
+                        impactFeedback.impactOccurred()
                         toxicManager.setToxicState(state: toxicManager.isToxic)
                         if toxicManager.isToxic{
                             toxicManager.setTimeSinceNow()

@@ -13,6 +13,7 @@ struct AboutView: View {
         Button("#About"){
             if !showingAbout {
                 showingAbout = true
+                impactFeedback.impactOccurred()
             }
         }
         .foregroundColor(Color.green)

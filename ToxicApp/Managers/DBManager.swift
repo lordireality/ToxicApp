@@ -20,7 +20,7 @@ class DBManager: ObservableObject{
     }()
     
     private init(){
-        let container = NSPersistentContainer(name: "MyFriendsFocusDataModel")
+        let container = NSPersistentContainer(name: "ToxicAppModel")
         container.loadPersistentStores { storeDescription, error in
             if let error {
                 fatalError("Error while initialising Cotainer \(error.localizedDescription)")
