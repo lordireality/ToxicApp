@@ -13,6 +13,7 @@ class ToxicManager: ObservableObject{
     @Published var isToxic = false
     @Published var seconds: Int64 = 0
     @Published var totalSeconds: Int64 = 0
+    
     init (){
         isToxic = self.getSavedToxicState()
         if isToxic {

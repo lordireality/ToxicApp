@@ -8,10 +8,15 @@
 import SwiftUI
 
 @main
+
 struct ToxicApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appDelegate.toxicManager)
         }
     }
 }

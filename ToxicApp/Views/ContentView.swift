@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
-
+public let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
 struct ContentView: View {
+    @EnvironmentObject var toxicManager: ToxicManager
+
     var body: some View {
         HStack{
-            MainView(toxicManager: ToxicManager())
+            MainView(toxicManager: toxicManager)
         }
         
     }

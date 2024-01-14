@@ -30,6 +30,7 @@
 		6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC872B532DA800EC7F5D /* ContentView.swift */; };
 		6774AC8A2B532DAD00EC7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6774AC892B532DAD00EC7F5D /* Assets.xcassets */; };
 		6774AC8D2B532DAD00EC7F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6774AC8C2B532DAD00EC7F5D /* Preview Assets.xcassets */; };
+		679A816D2B5418AF00A3BB51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A816C2B5418AF00A3BB51 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		6774AC8C2B532DAD00EC7F5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6774AC922B532DAE00EC7F5D /* ToxicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774AC9C2B532DAE00EC7F5D /* ToxicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		679A816C2B5418AF00A3BB51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				672ACBB62B534892006B9CD8 /* Managers */,
 				672ACBB72B5348B0006B9CD8 /* Extensions */,
 				6774AC852B532DA800EC7F5D /* ToxicApp.swift */,
+				679A816C2B5418AF00A3BB51 /* AppDelegate.swift */,
 				6774AC892B532DAD00EC7F5D /* Assets.xcassets */,
 				672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */,
 				6774AC8B2B532DAD00EC7F5D /* Preview Content */,
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679A816D2B5418AF00A3BB51 /* AppDelegate.swift in Sources */,
 				6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */,
 				672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */,
 				672ACBDE2B53EB69006B9CD8 /* AboutPresentationView.swift in Sources */,
