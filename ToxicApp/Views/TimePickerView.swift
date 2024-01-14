@@ -42,13 +42,11 @@ struct TimePickerView: View {
                 .pickerStyle(WheelPickerStyle())
             }
             Spacer()
-            HStack{
-                
-            }
             Button("#Submit") {
                 totalSelectedSeconds = Int64((((hours*60)+minutes)*60)+seconds)
                 dismiss()
             }
+            .foregroundColor(Color.green)
         }
         .padding()
     }
