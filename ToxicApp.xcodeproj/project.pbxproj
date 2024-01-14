@@ -24,6 +24,8 @@
 		672ACBD52B53667C006B9CD8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD42B53667C006B9CD8 /* MainView.swift */; };
 		672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBD62B536767006B9CD8 /* SessionManager.swift */; };
 		672ACBD92B5379A5006B9CD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBD82B5379A5006B9CD8 /* Localizable.xcstrings */; };
+		672ACBDC2B53EB56006B9CD8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBDB2B53EB56006B9CD8 /* AboutView.swift */; };
+		672ACBDE2B53EB69006B9CD8 /* AboutPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBDD2B53EB69006B9CD8 /* AboutPresentationView.swift */; };
 		6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC852B532DA800EC7F5D /* ToxicApp.swift */; };
 		6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774AC872B532DA800EC7F5D /* ContentView.swift */; };
 		6774AC8A2B532DAD00EC7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6774AC892B532DAD00EC7F5D /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		672ACBD42B53667C006B9CD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		672ACBD62B536767006B9CD8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		672ACBD82B5379A5006B9CD8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		672ACBDB2B53EB56006B9CD8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		672ACBDD2B53EB69006B9CD8 /* AboutPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresentationView.swift; sourceTree = "<group>"; };
 		6774AC822B532DA800EC7F5D /* ToxicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToxicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774AC852B532DA800EC7F5D /* ToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicApp.swift; sourceTree = "<group>"; };
 		6774AC872B532DA800EC7F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		672ACBDA2B53EB2D006B9CD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				672ACBA92B532EC7006B9CD8 /* MainView.swift */,
+				6774AC872B532DA800EC7F5D /* ContentView.swift */,
+				672ACBDB2B53EB56006B9CD8 /* AboutView.swift */,
+				672ACBDD2B53EB69006B9CD8 /* AboutPresentationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6774AC792B532DA800EC7F5D = {
 			isa = PBXGroup;
 			children = (
@@ -192,11 +207,10 @@
 		6774AC842B532DA800EC7F5D /* ToxicApp */ = {
 			isa = PBXGroup;
 			children = (
+				672ACBDA2B53EB2D006B9CD8 /* Views */,
 				672ACBB62B534892006B9CD8 /* Managers */,
 				672ACBB72B5348B0006B9CD8 /* Extensions */,
 				6774AC852B532DA800EC7F5D /* ToxicApp.swift */,
-				672ACBA92B532EC7006B9CD8 /* MainView.swift */,
-				6774AC872B532DA800EC7F5D /* ContentView.swift */,
 				6774AC892B532DAD00EC7F5D /* Assets.xcassets */,
 				672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */,
 				6774AC8B2B532DAD00EC7F5D /* Preview Content */,
@@ -393,8 +407,10 @@
 			files = (
 				6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */,
 				672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */,
+				672ACBDE2B53EB69006B9CD8 /* AboutPresentationView.swift in Sources */,
 				672ACBAA2B532EC7006B9CD8 /* MainView.swift in Sources */,
 				6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */,
+				672ACBDC2B53EB56006B9CD8 /* AboutView.swift in Sources */,
 				672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */,
 				672ACBAC2B533E5F006B9CD8 /* ToxicManager.swift in Sources */,
 				672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */,

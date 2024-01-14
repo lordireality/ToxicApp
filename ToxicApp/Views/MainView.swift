@@ -40,18 +40,19 @@ struct MainView: View {
                         }
                     }
             }.padding()
-            
-            
+            if(toxicManager.isToxic){
+                Text("#YouBeenToxic")
+                
+                Text(toxicManager.FormatTime(seconds: toxicManager.seconds))
+                .onReceive(timer) { _ in
+                    toxicManager.seconds += 1
+                }
+            }
+            AboutView()
         }
 
-        if(toxicManager.isToxic){
-            Text("#YouBeenToxic")
-            
-            Text(toxicManager.FormatTime(seconds: toxicManager.seconds))
-            .onReceive(timer) { _ in
-                toxicManager.seconds += 1
-            }
-        }
+
+        
         
         
     }
