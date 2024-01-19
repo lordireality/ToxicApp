@@ -123,6 +123,7 @@
 
     },
     "#Soon" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -309,6 +310,12 @@
       }
     },
     "%lld%%" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "test" : {
 
     }
   },

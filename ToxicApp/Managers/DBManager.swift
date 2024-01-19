@@ -41,5 +41,75 @@ class DBManager: ObservableObject{
             }
         }
     }
+    func createAchievment(localName: String, category: UUID) async -> Achievment?{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                let achivement = Achievment(context: self.backgroundContext)
+                achivement.id = .init()
+                achivement.localName = localName
+                achivement.unlocked = false
+                achivement.category = category
+                self.saveContext()
+                continuation.resume(returning: achivement)
+            }
+        })
+    }
+    func removeAchievment (achievment: Achievment) async -> Bool?{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                self.backgroundContext.delete(achievment)
+                self.saveContext()
+                continuation.resume(returning: true)
+            }
+        })
+    }
+    func createCategory(localName: String) async -> Category?{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                let category = Category(context: self.backgroundContext)
+                category.id = .init()
+                category.localName = localName
+                self.saveContext()
+                continuation.resume(returning: category)
+            }
+        })
+    }
+    func removeCategory (category: Category) async -> Bool?{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                self.backgroundContext.delete(category)
+                self.saveContext()
+                continuation.resume(returning: true)
+            }
+        })
+    }
+    func getCategories() async -> [Category]{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                let request = Category.fetchRequest()
+                do{
+                    let items = try self.backgroundContext.fetch(request)
+                    continuation.resume(returning: items)
+                }catch{
+                    
+                    continuation.resume(returning: [])
+                }
+            }
+        })
+    }
+    func getAchievments() async -> [Achievment]{
+        await withCheckedContinuation({ continuation in
+            self.backgroundContext.performAndWait{
+                let request = Achievment.fetchRequest()
+                do{
+                    let items = try self.backgroundContext.fetch(request)
+                    continuation.resume(returning: items)
+                }catch{
+                    
+                    continuation.resume(returning: [])
+                }
+            }
+        })
+    }
     
 }

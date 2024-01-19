@@ -10,6 +10,7 @@ import Foundation
 class ToxicManager: ObservableObject{
     
     private var sm:SessionManager = SessionManager()
+    
     @Published var isToxic = false
     @Published var seconds: Int64 = 0
     @Published var totalSeconds: Int64 = 0

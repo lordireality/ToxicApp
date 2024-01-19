@@ -36,6 +36,8 @@
 		679A81732B542BAF00A3BB51 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A81722B542BAF00A3BB51 /* ColorExtension.swift */; };
 		679A81752B54348100A3BB51 /* ToxicityRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A81742B54348100A3BB51 /* ToxicityRoundView.swift */; };
 		679A81772B543FC100A3BB51 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A81762B543FC100A3BB51 /* TimePickerView.swift */; };
+		67C26D412B54796000671016 /* AchievmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C26D402B54796000671016 /* AchievmentsManager.swift */; };
+		67D483C12B5AEAA300786490 /* AchievmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D483C02B5AEAA300786490 /* AchievmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		679A81722B542BAF00A3BB51 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		679A81742B54348100A3BB51 /* ToxicityRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicityRoundView.swift; sourceTree = "<group>"; };
 		679A81762B543FC100A3BB51 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		67C26D402B54796000671016 /* AchievmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsManager.swift; sourceTree = "<group>"; };
+		67D483C02B5AEAA300786490 /* AchievmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 				672ACBB42B534847006B9CD8 /* DBManager.swift */,
 				672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */,
 				672ACBD62B536767006B9CD8 /* SessionManager.swift */,
+				67C26D402B54796000671016 /* AchievmentsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				679A81702B542B5C00A3BB51 /* ToxicityRingView.swift */,
 				679A81742B54348100A3BB51 /* ToxicityRoundView.swift */,
 				679A81762B543FC100A3BB51 /* TimePickerView.swift */,
+				67D483C02B5AEAA300786490 /* AchievmentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C26D412B54796000671016 /* AchievmentsManager.swift in Sources */,
 				679A816D2B5418AF00A3BB51 /* AppDelegate.swift in Sources */,
 				6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */,
 				672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */,
@@ -432,6 +439,7 @@
 				679A81732B542BAF00A3BB51 /* ColorExtension.swift in Sources */,
 				679A81772B543FC100A3BB51 /* TimePickerView.swift in Sources */,
 				6774AC862B532DA800EC7F5D /* ToxicApp.swift in Sources */,
+				67D483C12B5AEAA300786490 /* AchievmentView.swift in Sources */,
 				672ACBDC2B53EB56006B9CD8 /* AboutView.swift in Sources */,
 				672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */,
 				672ACBAC2B533E5F006B9CD8 /* ToxicManager.swift in Sources */,

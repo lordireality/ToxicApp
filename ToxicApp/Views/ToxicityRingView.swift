@@ -22,7 +22,8 @@ struct ToxicityRingView: View {
     var body: some View {
         VStack{
             ToxicityRoundView(toxicManager: toxicManager)
-            Divider()
+            //Divider()
+            //TODO: View  BY DATES
             Divider()
             HStack{
                 VStack{

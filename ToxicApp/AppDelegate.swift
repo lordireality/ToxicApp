@@ -12,6 +12,7 @@ import SwiftUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var toxicManager = ToxicManager()
+    var achievmentManager = AchievmentsManager()
     var backgroundTask: UIBackgroundTaskIdentifier = .invalid
     var timer: Timer?
 
