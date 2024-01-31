@@ -12,7 +12,6 @@
 		672ACBAE2B534213006B9CD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */; };
 		672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBAF2B534618006B9CD8 /* ToxicAppModel.xcdatamodeld */; };
 		672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */; };
-		672ACBB52B534847006B9CD8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBB42B534847006B9CD8 /* DBManager.swift */; };
 		672ACBBF2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */; };
 		672ACBC12B535D9E006B9CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBC02B535D9E006B9CD8 /* ContentView.swift */; };
 		672ACBC32B535DA2006B9CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBC22B535DA2006B9CD8 /* Assets.xcassets */; };
@@ -38,6 +37,7 @@
 		679A81772B543FC100A3BB51 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679A81762B543FC100A3BB51 /* TimePickerView.swift */; };
 		67C26D412B54796000671016 /* AchievmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C26D402B54796000671016 /* AchievmentsManager.swift */; };
 		67D483C12B5AEAA300786490 /* AchievmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D483C02B5AEAA300786490 /* AchievmentView.swift */; };
+		67F060DA2B6A865E00C887CF /* AchievmentsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F060D92B6A865E00C887CF /* AchievmentsModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,6 @@
 		672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		672ACBB02B534618006B9CD8 /* ToxicAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToxicAppModel.xcdatamodel; sourceTree = "<group>"; };
 		672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
-		672ACBB42B534847006B9CD8 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToxicAppWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicAppWatchOSApp.swift; sourceTree = "<group>"; };
 		672ACBC02B535D9E006B9CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		679A81762B543FC100A3BB51 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		67C26D402B54796000671016 /* AchievmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsManager.swift; sourceTree = "<group>"; };
 		67D483C02B5AEAA300786490 /* AchievmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentView.swift; sourceTree = "<group>"; };
+		67F060D92B6A865E00C887CF /* AchievmentsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,6 @@
 		672ACBB62B534892006B9CD8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				672ACBB42B534847006B9CD8 /* DBManager.swift */,
 				672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */,
 				672ACBD62B536767006B9CD8 /* SessionManager.swift */,
 				67C26D402B54796000671016 /* AchievmentsManager.swift */,
@@ -230,6 +229,7 @@
 		6774AC842B532DA800EC7F5D /* ToxicApp */ = {
 			isa = PBXGroup;
 			children = (
+				67F060DB2B6A866400C887CF /* Models */,
 				672ACBDA2B53EB2D006B9CD8 /* Views */,
 				672ACBB62B534892006B9CD8 /* Managers */,
 				672ACBB72B5348B0006B9CD8 /* Extensions */,
@@ -249,6 +249,14 @@
 				6774AC8C2B532DAD00EC7F5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67F060DB2B6A866400C887CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67F060D92B6A865E00C887CF /* AchievmentsModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +439,7 @@
 			files = (
 				67C26D412B54796000671016 /* AchievmentsManager.swift in Sources */,
 				679A816D2B5418AF00A3BB51 /* AppDelegate.swift in Sources */,
+				67F060DA2B6A865E00C887CF /* AchievmentsModels.swift in Sources */,
 				6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */,
 				672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */,
 				672ACBDE2B53EB69006B9CD8 /* AboutPresentationView.swift in Sources */,
@@ -445,7 +454,6 @@
 				672ACBAC2B533E5F006B9CD8 /* ToxicManager.swift in Sources */,
 				672ACBD72B536767006B9CD8 /* SessionManager.swift in Sources */,
 				679A81712B542B5C00A3BB51 /* ToxicityRingView.swift in Sources */,
-				672ACBB52B534847006B9CD8 /* DBManager.swift in Sources */,
 				679A816F2B54278200A3BB51 /* AchievmentsMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

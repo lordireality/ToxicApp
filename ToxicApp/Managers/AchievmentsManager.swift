@@ -9,21 +9,17 @@ import Foundation
 
 class AchievmentsManager: ObservableObject{
     
-    private var dbm = DBManager.shared
+    var achievmentsCache:[AchievmentModel] = []
     
-    var achievmentsCache:[Achievment] = []
-    var categoryCache:[Category] = []
-    
-    init() async{
-        self.categoryCache =  await getAllCategory()
-        self.achievmentsCache = await getAllAchievments()
+    init()  {
+
     }
     
-    func getAllCategory() async->[Category]{
-        return await dbm.getCategories()
+    func getAllCategory() async->[AchievmentCategoryModel]{
+        return []
     }
-    func getAllAchievments() async->[Achievment]{
-        return await dbm.getAchievments()
+    func getAllAchievments() async->[AchievmentModel]{
+        return []
     }
     
     func checkStoredAchievments(){
