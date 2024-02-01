@@ -10,7 +10,6 @@
 		672ACBAA2B532EC7006B9CD8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBA92B532EC7006B9CD8 /* MainView.swift */; };
 		672ACBAC2B533E5F006B9CD8 /* ToxicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */; };
 		672ACBAE2B534213006B9CD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */; };
-		672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBAF2B534618006B9CD8 /* ToxicAppModel.xcdatamodeld */; };
 		672ACBB32B5347E5006B9CD8 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */; };
 		672ACBBF2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */; };
 		672ACBC12B535D9E006B9CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ACBC02B535D9E006B9CD8 /* ContentView.swift */; };
@@ -38,6 +37,7 @@
 		67C26D412B54796000671016 /* AchievmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C26D402B54796000671016 /* AchievmentsManager.swift */; };
 		67D483C12B5AEAA300786490 /* AchievmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D483C02B5AEAA300786490 /* AchievmentView.swift */; };
 		67F060DA2B6A865E00C887CF /* AchievmentsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F060D92B6A865E00C887CF /* AchievmentsModels.swift */; };
+		67F060DD2B6BA67C00C887CF /* achievments.json in Resources */ = {isa = PBXBuildFile; fileRef = 67F060DC2B6BA67C00C887CF /* achievments.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,6 @@
 		672ACBA92B532EC7006B9CD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		672ACBAB2B533E5F006B9CD8 /* ToxicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicManager.swift; sourceTree = "<group>"; };
 		672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		672ACBB02B534618006B9CD8 /* ToxicAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToxicAppModel.xcdatamodel; sourceTree = "<group>"; };
 		672ACBB22B5347E5006B9CD8 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		672ACBBC2B535D9D006B9CD8 /* ToxicAppWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToxicAppWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		672ACBBE2B535D9E006B9CD8 /* ToxicAppWatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicAppWatchOSApp.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		67C26D402B54796000671016 /* AchievmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsManager.swift; sourceTree = "<group>"; };
 		67D483C02B5AEAA300786490 /* AchievmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentView.swift; sourceTree = "<group>"; };
 		67F060D92B6A865E00C887CF /* AchievmentsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsModels.swift; sourceTree = "<group>"; };
+		67F060DC2B6BA67C00C887CF /* achievments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = achievments.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +229,7 @@
 		6774AC842B532DA800EC7F5D /* ToxicApp */ = {
 			isa = PBXGroup;
 			children = (
+				67F060DE2B6BA69200C887CF /* DataFiles */,
 				67F060DB2B6A866400C887CF /* Models */,
 				672ACBDA2B53EB2D006B9CD8 /* Views */,
 				672ACBB62B534892006B9CD8 /* Managers */,
@@ -238,7 +239,6 @@
 				6774AC892B532DAD00EC7F5D /* Assets.xcassets */,
 				672ACBAD2B534213006B9CD8 /* Localizable.xcstrings */,
 				6774AC8B2B532DAD00EC7F5D /* Preview Content */,
-				672ACBAF2B534618006B9CD8 /* ToxicAppModel.xcdatamodeld */,
 			);
 			path = ToxicApp;
 			sourceTree = "<group>";
@@ -257,6 +257,14 @@
 				67F060D92B6A865E00C887CF /* AchievmentsModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		67F060DE2B6BA69200C887CF /* DataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				67F060DC2B6BA67C00C887CF /* achievments.json */,
+			);
+			path = DataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +408,7 @@
 				6774AC8D2B532DAD00EC7F5D /* Preview Assets.xcassets in Resources */,
 				6774AC8A2B532DAD00EC7F5D /* Assets.xcassets in Resources */,
 				672ACBAE2B534213006B9CD8 /* Localizable.xcstrings in Resources */,
+				67F060DD2B6BA67C00C887CF /* achievments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +450,6 @@
 				679A816D2B5418AF00A3BB51 /* AppDelegate.swift in Sources */,
 				67F060DA2B6A865E00C887CF /* AchievmentsModels.swift in Sources */,
 				6774AC882B532DA800EC7F5D /* ContentView.swift in Sources */,
-				672ACBB12B534618006B9CD8 /* ToxicAppModel.xcdatamodeld in Sources */,
 				672ACBDE2B53EB69006B9CD8 /* AboutPresentationView.swift in Sources */,
 				679A81752B54348100A3BB51 /* ToxicityRoundView.swift in Sources */,
 				672ACBAA2B532EC7006B9CD8 /* MainView.swift in Sources */,
@@ -859,19 +867,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		672ACBAF2B534618006B9CD8 /* ToxicAppModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				672ACBB02B534618006B9CD8 /* ToxicAppModel.xcdatamodel */,
-			);
-			currentVersion = 672ACBB02B534618006B9CD8 /* ToxicAppModel.xcdatamodel */;
-			path = ToxicAppModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6774AC7A2B532DA800EC7F5D /* Project object */;
 }

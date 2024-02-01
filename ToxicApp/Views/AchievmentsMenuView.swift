@@ -10,25 +10,28 @@ import SwiftUI
 
 
 struct AchievmentsMenuView: View {
-    @StateObject var achManager: AchievmentsManager = AchievmentsManager();
+    @StateObject var achManager: AchievmentsManager = AchievmentsManager.shared;
     var body: some View {
         NavigationStack{
             
-            ForEach(achManager.categoryCache) { cat in
+            ForEach(achManager.achievmentsGrouppedCache.keys.sorted(), id: \.self){ key in
                 VStack{
                     HStack{
-                        Text(cat.localName ?? "")
+                        Text(key)
                         VStack{
                             Divider()
                         }
                     }
                     ScrollView(.horizontal){
-                        var achievments = achManager.achievmentsCache.filter{c in c.category == cat.id}
-                        ForEach(achievments){ ach in
-                            NavigationLink(destination: AchievmentView()) {
-                                Text("test")
+                        if let achievments = achManager.achievmentsGrouppedCache[key]{
+                            ForEach(achievments){ ach in
+                                NavigationLink(destination: AchievmentView()) {
+                                    Text("test")
+                                }
                             }
                         }
+            
+
                         
                     }
                     

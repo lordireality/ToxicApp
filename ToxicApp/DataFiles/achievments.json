@@ -1,0 +1,11 @@
+{"achievments":[
+    {
+        "name": "test achievment",
+        "category": {
+            "name": "test cat"
+        },
+        "isUnlocked": false,
+        "iconName": "AppIcon"
+    }
+]
+}

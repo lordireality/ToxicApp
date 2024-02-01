@@ -8,21 +8,32 @@
 import Foundation
 
 
-struct AchievmentModel {
-    var id:UUID
+struct AchievmentModel: Codable, Identifiable {
+    var id:UUID = .init()
     var name:String
-    var category:String //peredelat
+    var category:AchievmentCategoryModel //peredelat
     var isUnlocked:Bool
-    var iconData: Data?
-    init(id: UUID, name: String, category: String, isUnlocked: Bool, iconData: Data? = nil) {
-        self.id = .init()
-        self.name = name
-        self.category = category
-        self.isUnlocked = isUnlocked
-        self.iconData = iconData
+    var iconName: String
+    enum CodingKeys: String, CodingKey {
+        case name
+        case category
+        case isUnlocked
+        case iconName
+    }
+    
+    
+}
+struct AchievmentCategoryModel: Codable, Hashable{
+    var id:UUID = .init()
+    var name:String
+    enum CodingKeys: String, CodingKey {
+        case name
     }
 }
-struct AchievmentCategoryModel{
-    var id:UUID
-    var name:String
+
+
+///костыль для парса джсон
+struct AchievmentList: Codable {
+    var achievments: [AchievmentModel]
 }
+
