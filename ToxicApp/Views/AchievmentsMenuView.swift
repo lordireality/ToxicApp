@@ -13,31 +13,34 @@ struct AchievmentsMenuView: View {
     @StateObject var achManager: AchievmentsManager = AchievmentsManager.shared;
     var body: some View {
         NavigationStack{
-            
-            ForEach(achManager.achievmentsGrouppedCache.keys.sorted(), id: \.self){ key in
-                VStack{
-                    HStack{
-                        Text(key)
-                        VStack{
-                            Divider()
-                        }
-                    }
-                    ScrollView(.horizontal){
-                        if let achievments = achManager.achievmentsGrouppedCache[key]{
-                            ForEach(achievments){ ach in
-                                NavigationLink(destination: AchievmentView()) {
-                                    Text("test")
-                                }
+            ScrollView(.vertical){
+                ForEach(achManager.achievmentsGrouppedCache.keys.sorted(), id: \.self){ key in
+                    VStack{
+                        HStack{
+                            Text(key)
+                            VStack{
+                                Divider()
                             }
                         }
-            
+                        ScrollView(.horizontal){
+                            if let achievments = achManager.achievmentsGrouppedCache[key]{
+                                ForEach(achievments){ ach in
+                                    NavigationLink(destination: AchievmentView()) {
+                                        Text("test")
+                                    }
+                                }
+                            }
+                
 
+                            
+                        }
                         
                     }
                     
                 }
                 
             }
+
             
             
             //}
